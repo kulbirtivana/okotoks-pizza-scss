@@ -1,0 +1,81 @@
+// Browser reset.
+@use 'reset';
+
+//Variables.
+@use 'variables';
+
+//Mixins
+@use 'mixins';
+
+
+//Media Queries!
+@use 'media-queries';
+
+
+//Extends.
+
+%green-border{
+	border: 5px;
+	background: lime;
+			}
+
+
+nav {
+	font-family: variables.$ourFont;
+	color: variables.$color;
+	border-bottom: variables.$thickness solid
+	variables.$color;
+	@include mixins.transform( rotate(-20deg));
+	@extend %green-border;
+   }
+
+
+  #navigation > ul 
+ 					{
+  					list-style: none;
+					display: flex;
+					flex-direction: row;
+					flex-wrap: wrap;
+					background-color: #B81516;
+					height: 50px;
+					width:100%;
+					position: bottom;
+
+					}
+
+
+				 a
+					{
+					color: white;
+					font-size: 18px;
+					font-style: bold;
+					width:200px;
+					text-decoration: none;
+
+					}
+
+
+					li
+					{
+					  border-right: 1px solid #bbb;
+					  width: 33.333%;
+					  text-align: center;
+					  padding: 15px;
+
+					 }
+
+					 &:hover 
+						{
+  						background-color: #111;
+						}
+
+					&:last-child
+						{
+  						border-right: none;
+						}
+
+
+		}	
+
+
+	
